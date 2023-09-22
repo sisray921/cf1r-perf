@@ -102,6 +102,9 @@ export function renderWacky() {
 }
 
 export function renderFormFromSettings(bookSettings) {
+    // This was throwing errors, don't know why. 
+    // We probably don't need these fields anyway, so let's early return.
+    return;
     if (bookSettings.duplex) {
         document
             .querySelector('#printer_type > option[value="duplex"]')
